@@ -38,7 +38,7 @@ const SignUpForm = () => {
 	};
 
 	return (
-		<main>
+		<main className="container">
 			<h1>Sign Up</h1>
 			<p>{message}</p>
 			<form onSubmit={handleSubmit}>
@@ -77,7 +77,9 @@ const SignUpForm = () => {
 				</div>
 				<div>
 					<button disabled={isFormInvalid()}>Sign Up</button>
-					<button onClick={() => navigate("/")}>Cancel</button>
+					<button className="outline" onClick={() => navigate("/")}>
+						Cancel
+					</button>
 				</div>
 			</form>
 		</main>

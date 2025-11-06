@@ -11,7 +11,7 @@ const NavBar = () => {
 	};
 
 	return (
-		<nav>
+		<nav className="container">
 			{user ? (
 				<ul>
 					<li>Welcome, {user.username} </li>
@@ -25,10 +25,16 @@ const NavBar = () => {
 					</li>
 				</ul>
 			) : (
-					<ul>
-						<li><Link to="/">Home</Link></li>
-					<li><Link to="/sign-in">Sign In</Link></li>
-					<li><Link to="/sign-up">Sign Up</Link></li>
+				<ul>
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li>
+						<Link to="/sign-in">Sign In</Link>
+					</li>
+					<li>
+						<Link to="/sign-up">Sign Up</Link>
+					</li>
 				</ul>
 			)}
 		</nav>
