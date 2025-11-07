@@ -21,8 +21,24 @@ const show = async (jobId) => {
     }
 }
 
+const create = async (jobFormData) => {
+    try {
+        const res = await fetch(BASE_URL, {
+            method: "POST", 
+            headers: { 
+                Authorization: `Bearer ${localStorage.getItem('token')}`, 
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(jobFormData), 
+        });
+        return res.json();
+    } catch (err) {
+        console.log(err);
+    }
+}
 
 export {
     index,
     show,
+    create
 }

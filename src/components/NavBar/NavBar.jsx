@@ -19,6 +19,9 @@ const NavBar = () => {
 						<Link to="/">Dashboard</Link>
 					</li>
 					<li>
+						<Link to="/jobs/new">New Job</Link>
+					</li>
+					<li>
 						<Link to={"/"} onClick={handleSignOut}>
 							Sign Out
 						</Link>
